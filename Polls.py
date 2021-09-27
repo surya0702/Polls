@@ -1,9 +1,11 @@
 counter={} # A Dictonary to store the values of options given by the user
 options=[] # Options for the poll given by the User
 userCount=0 # No of users who answered the Poll
+question=""
 
 def ResultPrinter(): # Prints the Poll options and the percentage of times they were selected
-    print('\n\nThe Results of the Poll is :')
+    print('\n\n'+question)
+    print('The Results of the Poll is :')
     for option in options:
         percentage=(counter[option]/userCount)*100 if option in counter else 0
         percentage="{:.2f}".format(percentage)
